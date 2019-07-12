@@ -8,10 +8,15 @@ namespace WiseGenie
 {
     class Genie
     {
-        public static string[] answers = { "I cannot see that answer right now." };
+        private static string[] answers = { "I cannot see that answer right now." };
 
         public static void Answer(Question question)
         {
+            if (question.Answer != null)
+            {
+                Console.WriteLine(question.Answer);
+                return;
+            }
             Console.WriteLine("\n" + answers[0]);
         }
     }
