@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WiseGenie
 {
@@ -10,7 +6,9 @@ namespace WiseGenie
     {
         static void Main(string[] args)
         {
-            // Pose a question
+            Genie.ShowLamp();
+
+            // Pose a question, then pass it to the Genie
             Question question = new Question();
             Genie.Answer(question);
             Console.ReadLine();
